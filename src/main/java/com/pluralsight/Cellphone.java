@@ -19,6 +19,21 @@ class CellPhone {
         this.owner = "";
     }
     //Getters
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+    public String getModel() {
+        return model;
+    }
+    public String getCarrier() {
+        return carrier;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public String getOwner() {
+        return owner;
+    }
 }
 
 
