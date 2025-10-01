@@ -66,6 +66,3 @@ class CellPhone {
         this.owner = owner;
     }
 }
-
-
-
