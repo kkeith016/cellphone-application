@@ -1,25 +1,27 @@
 package com.pluralsight;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        //Creating an object
+        CellPhone phone = new CellPhone();
+
         System.out.print("Please enter your phones serial number: ");
-        String serialNumber = scan.nextLine();
+        phone.setPhoneNumber(scan.nextLine());
 
         System.out.print("What model is the phone? ");
-        String model = scan.nextLine();
+        phone.setModel(scan.nextLine());
 
         System.out.print("What is the carrier? ");
-        String carrier = scan.nextLine();
+        phone.setCarrier(scan.nextLine());
 
         System.out.print("What is the phone number? ");
-        String phoneNumber = scan.nextLine();
+        phone.setPhoneNumber(scan.nextLine());
 
         System.out.print("Who is the owner? ");
-        String owner = scan.nextLine();
+        phone.setOwner(scan.nextLine());
     }
 }

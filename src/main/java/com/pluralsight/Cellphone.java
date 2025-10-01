@@ -11,13 +11,15 @@ class CellPhone {
     private String owner;
 
     // Parameterless constructor (default values)
-    public CellPhone(Sting serialnumber,Sting model,String carrier,String phoneNumber,String owner) {
-        this.serialNumber = 0;
+    public CellPhone() {
+        this.serialNumber = "";
         this.model = "";
         this.carrier = "";
         this.phoneNumber = "";
         this.owner = "";
     }
+
+
     //Getters
     public String getSerialNumber() {
         return serialNumber;
