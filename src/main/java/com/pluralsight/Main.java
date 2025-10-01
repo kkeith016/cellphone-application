@@ -6,18 +6,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // First phone: user input
         CellPhone userPhoneOne = new CellPhone();
-        CellPhone userPhoneTwo = new CellPhone();
-
-        userPhoneTwo.setSerialNumber(888);
-        userPhoneTwo.setPhoneNumber("711");
-        userPhoneTwo.setOwner("Help Line");
-        userPhoneTwo.setCarrier("T-Mobile");
-        userPhoneTwo.setModel("Landline");
 
         System.out.print("What is the serial number? ");
-        int serialNumber = scan.nextInt(); //looking for number
-        scan.nextLine(); //Looks for \n character
+        int serialNumber = scan.nextInt();
+        scan.nextLine(); // consume leftover newline
         userPhoneOne.setSerialNumber(serialNumber);
 
         System.out.print("What model is the phone? ");
@@ -36,20 +30,24 @@ public class Main {
         String owner = scan.nextLine();
         userPhoneOne.setOwner(owner);
 
-       display(userPhoneOne);
-       display(userPhoneTwo);
+        // Second phone: hardcoded
+        CellPhone userPhoneTwo = new CellPhone(784444, "Landline", "Simpsons", "7277777885", "Moes Bar");
 
+        // Display both phones
+        display(userPhoneOne);
+        display(userPhoneTwo);
 
-        userPhoneOne.dial("(999) 555-1202");
-
+        // Phones prank call each other using overloaded dial()
+        userPhoneOne.dial(userPhoneTwo);
     }
 
     public static void display(CellPhone phone) {
+        System.out.println("\n=== Phone Info ===");
         System.out.println("Serial Number: " + phone.getSerialNumber());
         System.out.println("Model: " + phone.getModel());
         System.out.println("Carrier: " + phone.getCarrier());
         System.out.println("Phone Number: " + phone.getPhoneNumber());
         System.out.println("Owner: " + phone.getOwner());
+        System.out.println();
     }
-
 }
