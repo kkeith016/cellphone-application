@@ -36,8 +36,8 @@ public class Main {
         String owner = scan.nextLine();
         userPhoneOne.setOwner(owner);
 
-//        display(userPhoneOne);
-//        display(userPhoneTwo);
+       display(userPhoneOne);
+       display(userPhoneTwo);
 
 
         userPhoneOne.dial("(999) 555-1202");
